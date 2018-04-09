@@ -1,0 +1,49 @@
+<!-- Udacity FEND Project by Elham Jaffar --> 
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+</head>
+<body onload="start();">
+
+    <div class="container">
+        <header>
+            <h1>Matching Game</h1>
+        </header>
+        <!-- For move counter and stars -->
+        <section class="score-panel">
+            <div class="rate">
+               <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+              </ul>
+              <span class="moves">0</span> Moves
+          </div>
+          <!-- Restart button to start the game again -->
+          <div class="restart">
+              <i class="fa fa-repeat"></i>
+          </div>
+          <div class="timer">
+            <span class="fa fa-clock-o"></span><span class="countDown"></span>
+        </div>
+    </section>
+    <ul class="deck">
+    </ul>
+</div>
+<!-- Win Message -->
+<div id="popup" class="modal">
+</div>
+<!-- Add a jQuery & App javascript files -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.ui.shake.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

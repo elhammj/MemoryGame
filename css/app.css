@@ -1,0 +1,181 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.timer{
+  display: inline-block;
+  margin-left: 20px;
+}
+.countDown{
+  padding-left: 5px;
+}
+.rate{
+  display: inline-block;
+}
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+}
+.modalInfo {
+  position: relative;
+  background-color: #fff;
+  border: solid #2cbfbe;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+  width: 40%;
+  align-content: center;
+}
+/* By using : http://www.cssportal.com/css3-button-generator/ to generate css3 buttons*/
+#restart {
+  font-family: arial;
+  color: #14396A !important;
+  font-size: 14px;
+  text-shadow: 1px 1px 0px #7CACDE;
+  box-shadow: 1px 1px 1px #BEE2F9;
+  padding: 10px 25px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid #3866A3;
+  background: #2CBFBE;
+  background: linear-gradient(to top,  #33DBDA,  #468CCF);
+  background: -ms-linear-gradient(to top,  #33DBDA,  #468CCF);
+  background: -webkit-gradient(linear, to left top, to left bottom, from(#33DBDA), to(#468CCF));
+  background: -moz-linear-gradient(to top,  #33DBDA,  #468CCF);
+}
+#restart:hover {
+  color: #14396A !important;
+  background: #468CCF;
+  background: linear-gradient(to top,  #468CCF,  #63B8EE);
+  background: -ms-linear-gradient(to top,  #468CCF,  #63B8EE);
+  background: -webkit-gradient(linear, to left top, to left bottom, from(#468CCF), to(#63B8EE));
+  background: -moz-linear-gradient(to top,  #468CCF,  #63B8EE);
+}
+.list{
+  list-style-type:none;
+}
+.list li{
+  display: inline;
+}
