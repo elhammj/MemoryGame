@@ -82,6 +82,8 @@ let restart = function() {
     }
     //reset matching, timer and call open() function
     matching = 0;
+    //set tiem to 0 (clear Interval)
+    clearInterval(countDown);
     timer();
     open();
 }
@@ -167,8 +169,10 @@ let match = function(first, second) {
             starList += '<li><i class=\"fa fa-star\"></i></li>';
         }
         starList += '</ul>'
+        //check the timer
+        let winningTime = $('.countDown').text();
         //show the win daialog
-        let winModal = "<div class=\"modalInfo\"><div class=\"playAgain\"><p><strong>CONGRATULATIONS !!!</strong> <br> You Have collected the following stars: " + starList + "<br> Do you want to play again?</p><button id=\"restart\">Restart Game</button></div></div>";
+        let winModal = "<div class=\"modalInfo\"><div class=\"playAgain\"><p><strong>CONGRATULATIONS !!!</strong>You took <strong>" + winningTime + "</strong> seconds to win.<br> You Have collected the following stars: " + starList + "<br> Do you want to play again?</p><button id=\"restart\">Restart Game</button></div></div>";
         viewModal(winModal); //for viwing modal
     }
 }
