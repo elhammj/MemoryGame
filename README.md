@@ -4,11 +4,11 @@
 
 It is a memory pairs game that has 16 card s(8 different pairs).The cards are shuffling randomly and the user can view 2 cards at a time. 
 
-<img src=“img/game.png” width=“60%”>
+<img src="img/game.png" width="60%" alt="game UI">
 
 ## How to play?
 
-All you have to do is [clicking here](https://classroom.udacity.com/me)
+All you have to do is [clicking here](https://elhammj.github.io/MemoryGame/)
 
 * Start to flip one card a time
 * Try to find its pair to match them
